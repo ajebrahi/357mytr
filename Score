@@ -1,0 +1,55 @@
+make: Nothing to be done for `all'.
+FAIL: translation test 1. Output:
+ccf
+does not match expected:
+def def def ed ddddd dsedddfd sdf dsexfxfdsd ;lkj wefd fed eee eeffesedede
+FAIL: translation test 2. Output:\ndddf\ndoes not match expected:\neff eff eff ff efeee esffeffe sff esfxfxffse ;lkj wefe ffe fff fffffsfefef
+FAIL: translation test 3. Output:\nbe\ndoes not match expected:\nfec fec fec ed fdfff fsedfdff sdf fsexcxfdsf ;lkj weff cef eee eeccesefefe
+FAIL: translation test 4. Output:\nttl\ndoes not match expected:\nlsc lsc lsc sd ldlll lssdldfl sdf lssxcxfdsl ;lkj wefl csl sss ssccssslsls
+FAIL: translation test 5. Output\n q\ndoes not match expected:\nabcqabcqabcqbdqadaaaqasbdadfaqsdfqasbxcxfdsaq;lkjqwefaqcbaqbbbqbbccbsbabab
+FAIL: translation test 6. Output:\ntttttttttttttttttttttttttttttttt\ndoes not match expected:\ntttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+FAIL: translation test 7. Output:\nccf\ndoes not match expected:\n
+FAIL: escape test 1. Output:\nqq\ndoes not match expected:\naqbqcq 	a	b	c---
+aqbqcq 	a	---b	c
+nnn ttt --- /// """
+FAIL: escape test 2. Output\ntq\ndoes not match expected:\na\b\c\ qaqbqc---
+a\b\c\ qaq---bqc
+nnn ttt --- /// """
+FAIL: escape test 3. Output:\n-q\ndoes not match expected:\na\b\c\ 	a	b	cqqq
+a\b\c\ 	a	qqqb	c
+nnn ttt qqq /// """
+FAIL: escape test 4. Output:\n nq\ndoes not match expected:\na\b\c\ 	a	b	c---qa\b\c\ 	a	---b	cqnnn ttt --- /// """q
+FAIL: escape test 5: Output:\n"q\ndoes not match expected:\na\b\c\ 	a	b	c---
+a\b\c\ 	a	---b	c
+nnn ttt --- /// qqq
+FAIL: escape test 6. Output:\ndddt\ndoes not match expected:\n
+	\ 
+	\ 
+	\ 	- 
+-
+
+
+ 
+s	-
+-f
+ s-f 
+s	x\xf-s
+ ;lkj wef
+ \	
+ 			 		\\	s	
+	
+	
+FAIL: escape test 8. Output:\nabc 	a	b	c---
+abc 	a	---b	c
+nnn ttt --- /// \ndoes not match expected\na\b\c\ 	a	b	c---
+a\b\c\ 	a	---b	c
+nnn ttt --- /// 
+Passed 0/7 translation tests for a score of 0
+Passed 3/3 deletion tests for a score of 30.00
+Passed 2/9 escape tests for a score of 4.40
+Passed 7/7 error tests for a score of 10.00
+Final score: 44.40
+
+//home/getaylor-grader/copy/357hw1-tests/tst.sh: line 206: //home/getaylor-grader/copy/357hw1-tests/../complexity.sh: Permission denied
+
+Proj1/               Tests: 44.40/100	Total: 44.00/100	
