@@ -35,10 +35,10 @@ int main(int argc,char *argv[]){
         strcpy(SET1, argv[1]);
         strcpy(SET2, argv[2]);
     }
-/*
+/* escape */
     for(i = 0; i < strlen(SET1); i++){
         c = SET1[i];
-        if((SET1[i] == '\\') && (SET1[i+1] == '\n')){
+        if((SET1[i] == '\\') && (SET1[i+1] == 'n')){
             SET1[i] = '\n';
             for(j = (i + 1); j < strlen(SET1) - 1; j++){
                 SET1[j] = c;
@@ -47,7 +47,7 @@ int main(int argc,char *argv[]){
             }
 
         }
-        if((SET1[i] == '\\') && (SET1[i+1] == '\t')){
+        if((SET1[i] == '\\') && (SET1[i+1] == 't')){
             SET1[i] = '\t';
             for(j = (i + 1); j < strlen(SET1) - 1; j++){
                 SET1[j] = c;
@@ -56,7 +56,7 @@ int main(int argc,char *argv[]){
             }
         }
     }
-*/
+/* escape */
     if(delete == 0){
         for(i = 0; i < 256; i++){
             hash[i] = 0;
@@ -79,15 +79,18 @@ int main(int argc,char *argv[]){
                 SET2[i] = SET2[j-1];
             }
         }
+
         for(i = 0; i < 256; i++){
             hash[i] = i;
         }
-        /*for(i=0; i < strlen(SET1); i++){*/
-        for(i = 0; SET1[i] != '\0'; i++){
+
+        for(i=0; i < strlen(SET1); i++){
             if(SET1[i] != SET2[i]){
                 j = (unsigned)SET1[i];
                 hash[j] = SET2[i];
             }
+        }
+        while((c=getchar()) != EOF){
             d = hash[(unsigned)c];
             putchar(d);
         }
